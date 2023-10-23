@@ -135,6 +135,14 @@ function showDataConstructor(bookLists) {
             var title = prompt("Judul:", `${book.title}`);
             var author = prompt("Penulis:", `${book.author}`);
             var date = prompt("Tahun", `${book.release}`);
+
+            const index = findIndex(bookLists.id);
+            books[index].title = title;
+            books[index].author = author;
+            books[index].release = date;
+            inputLocalStorage();
+
+            document.dispatchEvent(new Event(RENDER_PAGES));
         })
 
         const deleteButton = document.createElement('i');
