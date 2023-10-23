@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Books</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="logo"><h1>My Books</h1></div>
+        <nav>
+            <ul>
+                <li class="Home">Home</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section-top">
+            <div class="form-wrap">
+            <h2>Tambahkan daftar bacaan</h2>
+            <form action="#" id="form">
+                <div class="input-section">
+                    <label for="judul">Judul Buku</label>
+                    <input type="text" name="judul" id="judul">
+                </div>
+                <div class="input-section">
+                    <label for="penulis">Penulis Buku</label>
+                    <input type="text" name="penulis" id="penulis">
+                </div>
+                <div class="input-section">
+                    <label for="tahun">Tahun Terbit</label>
+                    <input type="number" name="tahun" id="tahun">
+                </div>
+                <div class="inpu-status">
+                    <label for="input-status">Selesai dibaca?</label>
+                    <input type="checkbox" id="input-status" name="input-status">
+                </div>
+                <input class="input-section" type="submit" value="Submit" name="submit">
+            </form>
+            </div>
+            <div class="search-wrap">
+                <h2>Cari Buku</h2>
+                <label for="cari">Judul Buku</label>
+                <input type="text" name="cari" id="search-value">
+                <br>
+                <button class="search-button" id="search-button">Cari</button>
+                <button clas="back-button" id="back-button">Kembali</button>
+            </div>
+        </section>
+        <section class="section-bot">
+            <div class="unread-wrap" id="unread-wrap">
+                <h2>Belum Selesai Dibaca</h2>
+                <div class="unread" id="unread">
+                </div>
+            </div>
+            <div class="readed-wrap" id="readed-wrap">
+                <h2>Selesai Dibaca</h2>
+                <div class="readed" id="readed"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <span>Made for Idcamp by Achmad Riky Apriansyah</span>
+    </footer>
+    
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+</html>
