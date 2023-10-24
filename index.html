@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <div class="logo"><h1>My Books</h1></div>
+        <div class="logo">
+            <h1>My Books</h1>
+        </div>
         <nav>
             <ul>
                 <li class="home"><a href="#">Home</a></li>
@@ -22,42 +26,43 @@
     <main>
         <section class="section-top">
             <div class="input-wrap">
-            <div class="form-wrap">
-            <h2>Tambahkan daftar bacaan</h2>
-            <form action="#" class="inputt-form" id="form">
-                <div class="input-section">
-                    <label for="judul">Judul Buku</label>
-                    <input type="text" name="judul" id="judul" class="books-input">
+                <div class="form-wrap">
+                    <h2>Tambahkan daftar bacaan</h2>
+                    <form action="#" class="inputt-form" id="form">
+                        <div class="input-section">
+                            <label for="judul">Judul Buku</label>
+                            <input type="text" name="judul" id="judul" class="books-input">
+                        </div>
+                        <div class="input-section">
+                            <label for="penulis">Penulis Buku</label>
+                            <input type="text" name="penulis" id="penulis" class="books-input">
+                        </div>
+                        <div class="input-section">
+                            <label for="tahun">Tahun Terbit</label>
+                            <input type="number" name="tahun" id="tahun" class="books-input">
+                        </div>
+                        <div class="inpu-status">
+                            <label for="input-status" class="checkbox-label">Selesai dibaca?</label>
+                            <input type="checkbox" id="input-status" name="input-status" class="checkbox">
+                        </div>
+                        <div class="submit-button-wrapper">
+                            <input class="input-section books-input input-button" type="submit" value="Submit"
+                                name="submit">
+                        </div>
+                    </form>
                 </div>
-                <div class="input-section">
-                    <label for="penulis">Penulis Buku</label>
-                    <input type="text" name="penulis" id="penulis" class="books-input">
+                <div class="search-wrap">
+                    <h2>Cari Buku</h2>
+                    <div>
+                        <label for="cari">Judul Buku</label>
+                        <input type="text" name="cari" id="search-value" class="search-input">
+                    </div>
+                    <br>
+                    <div class="search-button-wrap">
+                        <button class="search-button" id="search-button">Cari</button>
+                        <button class="back-button" id="back-button">Kembali</button>
+                    </div>
                 </div>
-                <div class="input-section">
-                    <label for="tahun">Tahun Terbit</label>
-                    <input type="number" name="tahun" id="tahun" class="books-input">
-                </div>
-                <div class="inpu-status">
-                    <label for="input-status" class="checkbox-label">Selesai dibaca?</label>
-                    <input type="checkbox" id="input-status" name="input-status" class="checkbox">
-                </div>
-                <div class="submit-button-wrapper">
-                <input class="input-section books-input input-button" type="submit" value="Submit" name="submit">
-                </div>
-            </form>
-            </div>
-            <div class="search-wrap">
-                <h2>Cari Buku</h2>
-                <div>
-                <label for="cari">Judul Buku</label>
-                <input type="text" name="cari" id="search-value" class="search-input">
-                </div>
-                <br>
-                <div class="search-button-wrap">
-                <button class="search-button" id="search-button">Cari</button>
-                <button class="back-button" id="back-button">Kembali</button>
-                </div>
-            </div>
             </div>
         </section>
         <section class="section-bot">
@@ -75,7 +80,8 @@
     <footer>
         <span>Made for Idcamp by Achmad Riky Apriansyah</span>
     </footer>
-    
+
     <script src="./index.js" type="text/javascript"></script>
 </body>
+
 </html>

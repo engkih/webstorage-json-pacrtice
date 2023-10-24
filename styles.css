@@ -3,7 +3,8 @@
     font-family: 'Inter', sans-serif;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     /* margin: auto; */
@@ -22,7 +23,6 @@ body {
     flex-direction: column;
     background-color: #F1F6F9;
 }
-
 
 header ul {
     list-style: none;
@@ -59,7 +59,7 @@ main {
 .section-top {
     border: solid 1px grey;
     padding: 10px;
-    
+
 }
 
 .input-wrap {
@@ -67,6 +67,8 @@ main {
     margin: 0 auto;
     background-color: #9BA4B5;
     color: #F1F6F9;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 input {
@@ -74,17 +76,14 @@ input {
     border-radius: 3px;
 }
 
-input, .search-button, .back-button {
+input,
+.search-button,
+.back-button {
     float: right;
 }
 
-
-
-/* button {
-    margin-left: 10px;
-} */
-
-button, .input-button {
+button,
+.input-button {
     background-color: #F1F6F9;
     border-radius: 4px;
     border-style: none;
@@ -93,7 +92,7 @@ button, .input-button {
     color: #212A3E;
     cursor: pointer;
     display: inline-block;
-    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
     font-size: 13px;
     font-weight: 700;
     line-height: 1.5;
@@ -112,24 +111,23 @@ button, .input-button {
     touch-action: manipulation;
     width: 30%;
     margin-left: 10px;
-  }
-  
+}
+
 .search-button-wrapper {
     width: 100%;
-  }
+}
 
 button:hover,
 button:focus {
     background-color: #212A3E;
     color: #F1F6F9;
-  }
+}
 
 .input-button:hover,
 .input-button:focus {
     background-color: #212A3E;
     color: #F1F6F9;
 }
-
 
 .search-button-wrap {
     overflow: auto;
@@ -145,7 +143,6 @@ button:focus {
 
 .form-wrap {
     padding: 10px;
-    /* padding-bottom: 20px; */
     text-align: left;
     width: 100%;
     margin: 0 auto;
@@ -187,7 +184,6 @@ button:focus {
 }
 
 .bot-title {
-    /* border-bottom: solid 1px grey; */
     background-color: #394867;
     color: #F1F6F9;
     padding-left: 5px;
@@ -204,11 +200,10 @@ button:focus {
 .book-container {
     margin-bottom: 10px;
     padding: 10px;
-    /* border: solid 1px grey; */
-    /* border-radius: 10px; */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     animation-duration: 1s;
     animation-name: fadeIn;
+    border-radius: 5px;
 }
 
 .readed-color {
@@ -259,12 +254,14 @@ footer {
         width: 100%;
     }
 
-    .books-input, label {
+    .books-input,
+    label {
         display: block;
         width: 100%;
     }
 
-    .checkbox, .checkbox-label {
+    .checkbox,
+    .checkbox-label {
         display: inline;
     }
 
@@ -286,7 +283,8 @@ footer {
         gap: 2rem;
     }
 
-    .unread-wrap, .readed-wrap {
+    .unread-wrap,
+    .readed-wrap {
         width: 100%;
     }
 
