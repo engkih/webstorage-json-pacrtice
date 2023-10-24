@@ -32,16 +32,29 @@ main {
     
 }
 
+input, .search-button, .back-button {
+    float: right;
+}
+
+button {
+    margin-left: 10px;
+}
+
 .input-section {
     padding: 5px 0;
 }
 
+.input-form {
+    overflow: auto;
+}
+
 .form-wrap {
     padding: 10px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     text-align: left;
     width: 400px;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .search-wrap {
@@ -54,7 +67,9 @@ main {
 
 .section-bot {
     overflow: auto;
-    border: solid 1px grey;
+    border-bottom: solid 1px grey;
+    border-left: solid 1px grey;
+    border-right: solid 1px grey;
 }
 
 .unread-wrap {
@@ -63,15 +78,23 @@ main {
     padding-left: 10px;
 }
 
+.bot-title {
+    border-bottom: solid 1px grey;
+}
+
 .readed-wrap {
     float: right;
     text-align: left;
     width: 50%;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .book-container {
     margin-bottom: 10px;
+    padding: 10px;
+    border: solid 1px grey;
+    border-radius: 10px;
 }
 
 .fa {
