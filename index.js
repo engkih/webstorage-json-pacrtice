@@ -8,7 +8,25 @@ window.addEventListener('DOMContentLoaded', function () {
     const submit = document.getElementById('form');
 
     submit.addEventListener('submit', function (event) {
+        const judul = document.getElementById('judul').value;
+        const penulis = document.getElementById('penulis').value;
+        const tahun = document.getElementById('tahun').value;
         event.preventDefault();
+        if (judul == "") {
+            console.log(judul)
+            window.alert('Judul buku harus diisi!');
+            return;
+        }
+        if (penulis == "") {
+            console.log(judul)
+            window.alert('Penulis buku harus diisi!');
+            return;
+        }
+        if (tahun == "") {
+            console.log(judul)
+            window.alert('Tahun terbit buku harus diisi!');
+            return;
+        }
         makeData();
         console.log(books);
     });
