@@ -143,14 +143,19 @@ function showDataConstructor(bookLists) {
             inputLocalStorage();
 
             document.dispatchEvent(new Event(RENDER_PAGES));
-        })
+        });
 
         const deleteButton = document.createElement('i');
         deleteButton.setAttribute('class', 'fa  fa-trash fa-2x');
         deleteButton.addEventListener('click', function () {
             const bookIndex = findIndex(bookLists.id);
 
-            books.splice(bookIndex, 1);
+            if (confirm(`Anda yakin ingin menghapus buku "${bookLists.title}"?`)) {
+                books.splice(bookIndex, 1);
+            } else {
+                return;
+            }
+
             inputLocalStorage();
             document.dispatchEvent(new Event(RENDER_PAGES));
         });
@@ -166,6 +171,23 @@ function showDataConstructor(bookLists) {
             book.isComplete = false;
             inputLocalStorage();
             document.dispatchEvent(new Event(RENDER_PAGES));
+        });
+
+        const editButton = document.createElement('i');
+        editButton.setAttribute('class', 'fa fa-edit fa-2x');
+        editButton.addEventListener('click', function () {
+            const book = findData(bookLists.id);
+            var title = prompt("Judul:", `${book.title}`);
+            var author = prompt("Penulis:", `${book.author}`);
+            var date = prompt("Tahun", `${book.release}`);
+
+            const index = findIndex(bookLists.id);
+            books[index].title = title;
+            books[index].author = author;
+            books[index].release = date;
+            inputLocalStorage();
+
+            document.dispatchEvent(new Event(RENDER_PAGES));
         })
 
         const deleteButton = document.createElement('i');
@@ -173,19 +195,23 @@ function showDataConstructor(bookLists) {
         deleteButton.addEventListener('click', function () {
             const bookIndex = findIndex(bookLists.id);
 
-            books.splice(bookIndex, 1);
+            if (confirm(`Anda yakin ingin menghapus buku "${bookLists.title}"?`)) {
+                books.splice(bookIndex, 1);
+            } else {
+                return;
+            }
+
             inputLocalStorage();
             document.dispatchEvent(new Event(RENDER_PAGES));
-        })
+        });
 
-        container.append(bookTitle, authorText, releaseText, undoButton, deleteButton);
+        container.append(bookTitle, authorText, releaseText, undoButton, editButton, deleteButton);
     }
 
     return container;
 };
 
 //Search features
-
 const searchButton = document.getElementById('search-button');
 const backButton = document.getElementById('back-button');
 
