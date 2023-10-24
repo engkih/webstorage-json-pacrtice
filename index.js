@@ -120,6 +120,7 @@ function showDataConstructor(bookLists) {
 
         const completeButon = document.createElement('i');
         completeButon.setAttribute('class', 'fa fa-check-square fa-2x');
+        completeButon.setAttribute('title', 'Ubah status menjadi "Selesai Dibaca".')
         completeButon.addEventListener('click', function () {
             const book = findData(bookLists.id);
 
@@ -130,6 +131,7 @@ function showDataConstructor(bookLists) {
 
         const editButton = document.createElement('i');
         editButton.setAttribute('class', 'fa fa-edit fa-2x');
+        editButton.setAttribute('title', 'Ubah keterangan buku.')
         editButton.addEventListener('click', function () {
             const book = findData(bookLists.id);
             var title = prompt("Judul:", `${book.title}`);
@@ -147,6 +149,7 @@ function showDataConstructor(bookLists) {
 
         const deleteButton = document.createElement('i');
         deleteButton.setAttribute('class', 'fa  fa-trash fa-2x');
+        deleteButton.setAttribute('title', 'Hapus buku dari list.')
         deleteButton.addEventListener('click', function () {
             const bookIndex = findIndex(bookLists.id);
 
@@ -163,8 +166,11 @@ function showDataConstructor(bookLists) {
         container.append(bookTitle, authorText, releaseText, completeButon, editButton, deleteButton);
 
     } else {
+        container.setAttribute('class', 'book-container readed-color');
+
         const undoButton = document.createElement('i');
         undoButton.setAttribute('class', 'fa fa-remove fa-2x');
+        undoButton.setAttribute('title', 'Ubah status menjadi "Belum Selesai Dibaca')
         undoButton.addEventListener('click', function () {
             const book = findData(bookLists.id);
 
@@ -175,6 +181,7 @@ function showDataConstructor(bookLists) {
 
         const editButton = document.createElement('i');
         editButton.setAttribute('class', 'fa fa-edit fa-2x');
+        editButton.setAttribute('title', 'Ubah keterangan buku.')
         editButton.addEventListener('click', function () {
             const book = findData(bookLists.id);
             var title = prompt("Judul:", `${book.title}`);
@@ -192,6 +199,7 @@ function showDataConstructor(bookLists) {
 
         const deleteButton = document.createElement('i');
         deleteButton.setAttribute('class', 'fa  fa-trash fa-2x');
+        deleteButton.setAttribute('title', 'Hapus buku dari list.')
         deleteButton.addEventListener('click', function () {
             const bookIndex = findIndex(bookLists.id);
 

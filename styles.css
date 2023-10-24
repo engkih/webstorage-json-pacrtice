@@ -6,13 +6,21 @@
 html, body {
     width: 100%;
     height: 100%;
+    /* margin: auto; */
+    /* padding: 0 1%; */
     margin: auto;
-    padding: 0 1%;
+    padding: 0 10px;
+}
+
+.logo {
+    border: solid 5px #212A3E;
+    width: 200px;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    background-color: #F1F6F9;
 }
 
 
@@ -20,6 +28,28 @@ header ul {
     list-style: none;
     border-top: solid 1px gray;
     border-bottom: solid 1px gray;
+    background-color: #394867;
+    color: #F1F6F9;
+}
+
+.home a:link {
+    color: #F1F6F9;
+    text-decoration: none;
+}
+
+.home a:visited {
+    color: #F1F6F9;
+    text-decoration: none;
+}
+
+.home a:hover {
+    color: #F1F6F9;
+    text-decoration: none;
+}
+
+.home a:active {
+    color: #F1F6F9;
+    text-decoration: none;
 }
 
 main {
@@ -32,12 +62,77 @@ main {
     
 }
 
+.input-wrap {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #9BA4B5;
+    color: #F1F6F9;
+}
+
+input {
+    background-color: #F1F6F9;
+    border-radius: 3px;
+}
+
 input, .search-button, .back-button {
     float: right;
 }
 
-button {
+
+
+/* button {
     margin-left: 10px;
+} */
+
+button, .input-button {
+    background-color: #F1F6F9;
+    border-radius: 4px;
+    border-style: none;
+    border: solid 1px #212A3E;
+    box-sizing: border-box;
+    color: #212A3E;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    min-height: 40px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 5px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 30%;
+    margin-left: 10px;
+  }
+  
+.search-button-wrapper {
+    width: 100%;
+  }
+
+button:hover,
+button:focus {
+    background-color: #212A3E;
+    color: #F1F6F9;
+  }
+
+.input-button:hover,
+.input-button:focus {
+    background-color: #212A3E;
+    color: #F1F6F9;
+}
+
+
+.search-button-wrap {
+    overflow: auto;
 }
 
 .input-section {
@@ -52,17 +147,29 @@ button {
     padding: 10px;
     /* padding-bottom: 20px; */
     text-align: left;
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.form-wrap h2 {
+    background-color: #394867;
+    color: #F1F6F9;
+    padding-left: 5px;
 }
 
 .search-wrap {
     padding: 10px;
     padding-bottom: 30px;
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
     border-top: solid 1px grey;
+}
+
+.search-wrap h2 {
+    background-color: #394867;
+    color: #F1F6F9;
+    padding-left: 5px;
 }
 
 .section-bot {
@@ -76,10 +183,14 @@ button {
     float: left;
     width: 50%;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .bot-title {
-    border-bottom: solid 1px grey;
+    /* border-bottom: solid 1px grey; */
+    background-color: #394867;
+    color: #F1F6F9;
+    padding-left: 5px;
 }
 
 .readed-wrap {
@@ -93,8 +204,26 @@ button {
 .book-container {
     margin-bottom: 10px;
     padding: 10px;
-    border: solid 1px grey;
-    border-radius: 10px;
+    /* border: solid 1px grey; */
+    /* border-radius: 10px; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation-duration: 1s;
+    animation-name: fadeIn;
+}
+
+.readed-color {
+    background-color: #9BA4B5;
+    color: #394867;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .fa {
@@ -107,4 +236,62 @@ button {
 
 footer {
     margin-top: auto;
+}
+
+
+/* Media query for mobile phones */
+@media screen and (max-width: 600px) {
+
+    .logo {
+        width: 150px;
+    }
+
+    .input-wrap {
+        width: 100%;
+    }
+
+    .form-wrap {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .search-wrap {
+        width: 100%;
+    }
+
+    .books-input, label {
+        display: block;
+        width: 100%;
+    }
+
+    .checkbox, .checkbox-label {
+        display: inline;
+    }
+
+    .input-section {
+        margin: 1rem auto;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-button-wrap {
+        margin-top: 1rem;
+    }
+
+    .section-bot {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .unread-wrap, .readed-wrap {
+        width: 100%;
+    }
+
+    footer span {
+        font-size: small;
+    }
+
 }

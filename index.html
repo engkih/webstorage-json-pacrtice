@@ -15,45 +15,49 @@
         <div class="logo"><h1>My Books</h1></div>
         <nav>
             <ul>
-                <li class="Home">Home</li>
+                <li class="home"><a href="#">Home</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="section-top">
+            <div class="input-wrap">
             <div class="form-wrap">
             <h2>Tambahkan daftar bacaan</h2>
             <form action="#" class="inputt-form" id="form">
                 <div class="input-section">
                     <label for="judul">Judul Buku</label>
-                    <input type="text" name="judul" id="judul">
+                    <input type="text" name="judul" id="judul" class="books-input">
                 </div>
                 <div class="input-section">
                     <label for="penulis">Penulis Buku</label>
-                    <input type="text" name="penulis" id="penulis">
+                    <input type="text" name="penulis" id="penulis" class="books-input">
                 </div>
                 <div class="input-section">
                     <label for="tahun">Tahun Terbit</label>
-                    <input type="number" name="tahun" id="tahun">
+                    <input type="number" name="tahun" id="tahun" class="books-input">
                 </div>
                 <div class="inpu-status">
-                    <label for="input-status">Selesai dibaca?</label>
-                    <input type="checkbox" id="input-status" name="input-status">
+                    <label for="input-status" class="checkbox-label">Selesai dibaca?</label>
+                    <input type="checkbox" id="input-status" name="input-status" class="checkbox">
                 </div>
-                <input class="input-section" type="submit" value="Submit" name="submit">
+                <div class="submit-button-wrapper">
+                <input class="input-section books-input input-button" type="submit" value="Submit" name="submit">
+                </div>
             </form>
             </div>
             <div class="search-wrap">
                 <h2>Cari Buku</h2>
                 <div>
                 <label for="cari">Judul Buku</label>
-                <input type="text" name="cari" id="search-value">
+                <input type="text" name="cari" id="search-value" class="search-input">
                 </div>
                 <br>
                 <div class="search-button-wrap">
                 <button class="search-button" id="search-button">Cari</button>
                 <button class="back-button" id="back-button">Kembali</button>
                 </div>
+            </div>
             </div>
         </section>
         <section class="section-bot">
