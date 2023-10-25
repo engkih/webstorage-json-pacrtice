@@ -92,7 +92,7 @@ function makeData() {
     }
 
     const dataId = generateId();
-    const newData = dataStructure(dataId, judul, penulis, tahun, trueFalse(status));
+    const newData = dataStructure(dataId, judul, penulis, parseInt(tahun), trueFalse(status));
     books.unshift(newData);
     inputLocalStorage();
     document.dispatchEvent(new Event(RENDER_PAGES));
@@ -159,7 +159,7 @@ function showDataConstructor(bookLists) {
             const index = findIndex(bookLists.id);
             books[index].title = title;
             books[index].author = author;
-            books[index].release = date;
+            books[index].release = parseInt(date);
             inputLocalStorage();
 
             document.dispatchEvent(new Event(RENDER_PAGES));
@@ -209,7 +209,7 @@ function showDataConstructor(bookLists) {
             const index = findIndex(bookLists.id);
             books[index].title = title;
             books[index].author = author;
-            books[index].release = date;
+            books[index].release = parseInt(date);
             inputLocalStorage();
 
             document.dispatchEvent(new Event(RENDER_PAGES));

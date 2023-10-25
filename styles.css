@@ -13,9 +13,10 @@ body {
     padding: 0 10px;
 }
 
-.logo {
+.logo h1 {
     border: solid 5px #212A3E;
     width: 200px;
+    padding: 10px;
 }
 
 body {
@@ -237,7 +238,7 @@ footer {
 /* Media query for mobile phones */
 @media screen and (max-width: 600px) {
 
-    .logo {
+    .logo h1 {
         width: 150px;
     }
 
