@@ -31,6 +31,7 @@ header ul {
     border-bottom: solid 1px gray;
     background-color: #394867;
     color: #F1F6F9;
+    border-radius: 8px;
 }
 
 .home a:link {
@@ -60,7 +61,7 @@ main {
 .section-top {
     border: solid 1px grey;
     padding: 10px;
-
+    border-radius: 8px;
 }
 
 .input-wrap {
@@ -154,6 +155,7 @@ button:focus {
     background-color: #394867;
     color: #F1F6F9;
     padding-left: 5px;
+    border-radius: 3px;
 }
 
 .search-wrap {
@@ -168,6 +170,7 @@ button:focus {
     background-color: #394867;
     color: #F1F6F9;
     padding-left: 5px;
+    border-radius: 3px;
 }
 
 .section-bot {
@@ -175,6 +178,7 @@ button:focus {
     border-bottom: solid 1px grey;
     border-left: solid 1px grey;
     border-right: solid 1px grey;
+    border-radius: 8px;
 }
 
 .unread-wrap {
@@ -188,6 +192,7 @@ button:focus {
     background-color: #394867;
     color: #F1F6F9;
     padding-left: 5px;
+    border-radius: 3px;
 }
 
 .readed-wrap {
